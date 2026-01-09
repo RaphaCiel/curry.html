@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="th" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="สูตรแกงกะหรี่ญี่ปุ่นสไตล์โฮมเมด อร่อยง่ายๆ ทำได้ที่บ้าน พร้อมเคล็ดลับความอร่อย">
+    <title>🍛 สูตรแกงกะหรี่ญี่ปุ่น | Curry Rice Recipe</title>
+    <link rel="stylesheet" href="curry.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span>🍛</span>
+                Curry Recipe
+            </a>
+            <ul class="nav-links">
+                <li><a href="#ingredients">วัตถุดิบ</a></li>
+                <li><a href="#instructions">วิธีทำ</a></li>
+                <li><a href="#timer">จับเวลา</a></li>
+                <li><a href="#tips">เคล็ดลับ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                    🌙
+                </button>
+                <button class="btn-print" onclick="window.print()">
+                    🖨️ พิมพ์สูตร
+                </button>
+            </div>
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>⭐</span> สูตรยอดนิยม
+                </div>
+                <h1 class="hero-title">แกงกะหรี่ญี่ปุ่น<br>สไตล์โฮมเมด</h1>
+                <p class="hero-description">
+                    รสชาติเข้มข้น หอมเครื่องเทศ เนื้อนุ่มละลายในปาก 
+                    พร้อมผักหวานๆ เสิร์ฟคู่ข้าวสวยร้อนๆ อร่อยเหมือนร้านอาหารญี่ปุ่น!
+                </p>
+                <div class="hero-meta">
+                    <div class="meta-item">
+                        <span class="meta-icon">⏱️</span>
+                        <div class="meta-info">
+                            <span class="meta-label">เวลาทำ</span>
+                            <span class="meta-value">45 นาที</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">📊</span>
+                        <div class="meta-info">
+                            <span class="meta-label">ระดับ</span>
+                            <span class="meta-value">ง่าย</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <span class="meta-icon">🍽️</span>
+                        <div class="meta-info">
+                            <span class="meta-label">เสิร์ฟ</span>
+                            <span class="meta-value">4 ที่</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="curry-hero.png" alt="แกงกะหรี่ญี่ปุ่น">
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Servings Calculator -->
+        <div class="servings-calculator" id="servingsCalc">
+            <div class="servings-label">
+                <span>🔢</span> ปรับจำนวนเสิร์ฟ
+            </div>
+            <div class="servings-controls">
+                <button class="servings-btn" id="decreaseServings">−</button>
+                <div class="servings-display">
+                    <span id="servingsCount">4</span>
+                    <span class="servings-unit">ที่</span>
+                </div>
+                <button class="servings-btn" id="increaseServings">+</button>
+            </div>
+        </div>
+
+        <!-- Ingredients Section -->
+        <section class="section" id="ingredients">
+            <div class="section-header">
+                <h2 class="section-title">🥘 วัตถุดิบ</h2>
+                <p class="section-subtitle">คลิกเพื่อเช็ครายการที่มีแล้ว</p>
+            </div>
+            <div class="ingredients-grid" id="ingredientsGrid">
+                <div class="ingredient-card" data-amount="300" data-unit="กรัม">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">🍖</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">เนื้อไก่หรือหมู</div>
+                        <div class="ingredient-amount"><span class="amount">300</span> กรัม</div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-amount="2" data-unit="ลูก">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">🥔</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">มันฝรั่ง</div>
+                        <div class="ingredient-amount"><span class="amount">2</span> ลูก</div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-amount="1" data-unit="หัว">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">🥕</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">แครอท</div>
+                        <div class="ingredient-amount"><span class="amount">1</span> หัว</div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-amount="1" data-unit="หัว">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">🧅</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">หัวหอมใหญ่</div>
+                        <div class="ingredient-amount"><span class="amount">1</span> หัว</div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-amount="3" data-unit="ช้อนโต๊ะ">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">🍛</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">ผงแกงกะหรี่</div>
+                        <div class="ingredient-amount"><span class="amount">3</span> ช้อนโต๊ะ</div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-amount="2" data-unit="ช้อนโต๊ะ">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">🫒</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">น้ำมันพืช</div>
+                        <div class="ingredient-amount"><span class="amount">2</span> ช้อนโต๊ะ</div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-amount="500" data-unit="มล.">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">💧</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">น้ำเปล่า</div>
+                        <div class="ingredient-amount"><span class="amount">500</span> มล.</div>
+                    </div>
+                </div>
+                <div class="ingredient-card" data-amount="1" data-unit="ตามชอบ">
+                    <div class="ingredient-checkbox"></div>
+                    <span class="ingredient-icon">🧂</span>
+                    <div class="ingredient-info">
+                        <div class="ingredient-name">เกลือและพริกไทย</div>
+                        <div class="ingredient-amount">ตามชอบ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Instructions Section -->
+        <section class="section" id="instructions">
+            <div class="section-header">
+                <h2 class="section-title">👨‍🍳 วิธีทำ</h2>
+                <p class="section-subtitle">ทำตามขั้นตอนง่ายๆ 6 ขั้นตอน</p>
+            </div>
+            <div class="instructions-list">
+                <div class="instruction-card">
+                    <div class="instruction-number">1</div>
+                    <div class="instruction-content">
+                        <h3 class="instruction-title">เตรียมวัตถุดิบ</h3>
+                        <p class="instruction-text">
+                            หั่นเนื้อไก่หรือหมูเป็นชิ้นพอดีคำ ปอกเปลือกและหั่นมันฝรั่งเป็นก้อน 
+                            หั่นแครอทเป็นชิ้นหนาประมาณครึ่งนิ้ว และหั่นหัวหอมเป็นเสี้ยว
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-number">2</div>
+                    <div class="instruction-content">
+                        <h3 class="instruction-title">ผัดหัวหอม</h3>
+                        <p class="instruction-text">
+                            ตั้งกระทะหรือหม้อบนไฟกลาง ใส่น้ำมันพืช รอให้ร้อน 
+                            ใส่หัวหอมลงผัดจนเริ่มใสและมีกลิ่นหอม ประมาณ 3-4 นาที
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-number">3</div>
+                    <div class="instruction-content">
+                        <h3 class="instruction-title">ผัดเนื้อสัตว์</h3>
+                        <p class="instruction-text">
+                            ใส่เนื้อไก่หรือหมูลงไปผัดจนด้านนอกเริ่มสุกเปลี่ยนสี 
+                            คนให้ทั่วเพื่อให้สุกสม่ำเสมอ ประมาณ 5 นาที
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-number">4</div>
+                    <div class="instruction-content">
+                        <h3 class="instruction-title">เติมผงแกงกะหรี่และน้ำ</h3>
+                        <p class="instruction-text">
+                            โรยผงแกงกะหรี่ลงไป คนให้เข้ากัน จากนั้นเติมน้ำเปล่า 
+                            คนให้ผงแกงกะหรี่ละลายเข้ากับน้ำ เร่งไฟให้เดือด แล้วลดลงเป็นไฟกลาง
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-number">5</div>
+                    <div class="instruction-content">
+                        <h3 class="instruction-title">เคี่ยวผัก</h3>
+                        <p class="instruction-text">
+                            ใส่มันฝรั่งและแครอทลงไป เคี่ยวด้วยไฟกลางค่อนข้างอ่อน 
+                            คนเป็นระยะเพื่อไม่ให้ติดก้นหม้อ เคี่ยวจนผักนุ่มประมาณ 20-25 นาที
+                        </p>
+                    </div>
+                </div>
+                <div class="instruction-card">
+                    <div class="instruction-number">6</div>
+                    <div class="instruction-content">
+                        <h3 class="instruction-title">ปรุงรสและเสิร์ฟ</h3>
+                        <p class="instruction-text">
+                            ชิมรสและปรุงด้วยเกลือและพริกไทยตามชอบ 
+                            ตักราดบนข้าวสวยร้อนๆ ตกแต่งด้วยผักดองหรือไข่ต้มยางมะตูม พร้อมเสิร์ฟ!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timer Section -->
+        <section class="section" id="timer">
+            <div class="section-header">
+                <h2 class="section-title">⏱️ จับเวลาทำอาหาร</h2>
+                <p class="section-subtitle">ตั้งเวลาเพื่อไม่ให้พลาดช่วงเวลาสำคัญ</p>
+            </div>
+            <div class="timer-section">
+                <div class="timer-display" id="timerDisplay">00:00</div>
+                <div class="timer-label">นาที : วินาที</div>
+                <div class="timer-presets">
+                    <button class="timer-preset" data-minutes="5">5 นาที</button>
+                    <button class="timer-preset" data-minutes="10">10 นาที</button>
+                    <button class="timer-preset" data-minutes="15">15 นาที</button>
+                    <button class="timer-preset active" data-minutes="20">20 นาที</button>
+                    <button class="timer-preset" data-minutes="25">25 นาที</button>
+                    <button class="timer-preset" data-minutes="30">30 นาที</button>
+                </div>
+                <div class="timer-controls">
+                    <button class="timer-btn start" id="timerStart">
+                        ▶️ เริ่ม
+                    </button>
+                    <button class="timer-btn reset" id="timerReset">
+                        🔄 รีเซ็ต
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tips Section -->
+        <section class="section" id="tips">
+            <div class="section-header">
+                <h2 class="section-title">💡 เคล็ดลับความอร่อย</h2>
+                <p class="section-subtitle">เทคนิคที่ทำให้แกงกะหรี่อร่อยขึ้นอีกระดับ</p>
+            </div>
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-icon">🍎</div>
+                    <h3 class="tip-title">เพิ่มความหวานธรรมชาติ</h3>
+                    <p class="tip-text">
+                        ใส่แอปเปิลขูดหรือน้ำผึ้งเล็กน้อย จะช่วยเพิ่มความหวานและเข้มข้นให้แกง
+                    </p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🧈</div>
+                    <h3 class="tip-title">เนยสด = ครีมมี่</h3>
+                    <p class="tip-text">
+                        ใส่เนยสดหนึ่งช้อนโต๊ะตอนจะเสิร์ฟ จะทำให้แกงหอมมันและเนียนนุ่มขึ้น
+                    </p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">🍫</div>
+                    <h3 class="tip-title">ช็อกโกแลตซ่อนรส</h3>
+                    <p class="tip-text">
+                        ใส่ช็อกโกแลตดำเล็กน้อยจะช่วยเพิ่มความลึกของรสชาติ เหมือนร้านอาหารญี่ปุ่น
+                    </p>
+                </div>
+                <div class="tip-card">
+                    <div class="tip-icon">❄️</div>
+                    <h3 class="tip-title">พักค้างคืน</h3>
+                    <p class="tip-text">
+                        แกงกะหรี่จะอร่อยขึ้นเมื่อพักในตู้เย็นข้ามคืน รสชาติจะซึมเข้าเนื้อสัตว์และผักมากขึ้น
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Nutrition Info -->
+        <section class="section" id="nutrition">
+            <div class="section-header">
+                <h2 class="section-title">📊 ข้อมูลโภชนาการ</h2>
+                <p class="section-subtitle">ต่อหนึ่งที่ (ประมาณ)</p>
+            </div>
+            <div class="nutrition-grid">
+                <div class="nutrition-card">
+                    <div class="nutrition-value">520</div>
+                    <div class="nutrition-unit">kcal</div>
+                    <div class="nutrition-label">แคลอรี่</div>
+                </div>
+                <div class="nutrition-card">
+                    <div class="nutrition-value">28</div>
+                    <div class="nutrition-unit">g</div>
+                    <div class="nutrition-label">โปรตีน</div>
+                </div>
+                <div class="nutrition-card">
+                    <div class="nutrition-value">45</div>
+                    <div class="nutrition-unit">g</div>
+                    <div class="nutrition-label">คาร์โบไฮเดรต</div>
+                </div>
+                <div class="nutrition-card">
+                    <div class="nutrition-value">18</div>
+                    <div class="nutrition-unit">g</div>
+                    <div class="nutrition-label">ไขมัน</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Related Recipes -->
+        <section class="section" id="related">
+            <div class="section-header">
+                <h2 class="section-title">🍲 เมนูที่คุณอาจชอบ</h2>
+                <p class="section-subtitle">ลองสูตรอื่นๆ ที่คล้ายกัน</p>
+            </div>
+            <div class="related-grid">
+                <div class="related-card">
+                    <div class="related-image">🍜</div>
+                    <div class="related-content">
+                        <h3 class="related-title">ราเมนหมูชาชู</h3>
+                        <div class="related-time">⏱️ 60 นาที</div>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">🍱</div>
+                    <div class="related-content">
+                        <h3 class="related-title">ข้าวหน้าหมูทอด</h3>
+                        <div class="related-time">⏱️ 30 นาที</div>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">🥘</div>
+                    <div class="related-content">
+                        <h3 class="related-title">สตูว์เนื้อ</h3>
+                        <div class="related-time">⏱️ 90 นาที</div>
+                    </div>
+                </div>
+                <div class="related-card">
+                    <div class="related-image">🍝</div>
+                    <div class="related-content">
+                        <h3 class="related-title">มักกะโรนีอบชีส</h3>
+                        <div class="related-time">⏱️ 40 นาที</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">🍛</div>
+            <p class="footer-text">
+                สูตรอาหารทำเองง่ายๆ สไตล์โฮมเมด<br>
+                ทำด้วยความรัก เสิร์ฟด้วยความสุข
+            </p>
+            <div class="footer-links">
+                <a href="#" class="footer-link">หน้าแรก</a>
+                <a href="#ingredients" class="footer-link">วัตถุดิบ</a>
+                <a href="#instructions" class="footer-link">วิธีทำ</a>
+                <a href="#tips" class="footer-link">เคล็ดลับ</a>
+            </div>
+            <p class="footer-copy">
+                © 2026 สูตรอร่อยจาก RafaCiel | Made with RafaCiel
+            </p>
+        </div>
+    </footer>
+
+    <script src="curry.js"></script>
+</body>
+</html>
