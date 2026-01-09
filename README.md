@@ -23,20 +23,6 @@
 | 📱 **Responsive**           | รองรับทุก device                            |
 | 🖨️ **Print Recipe**         | พิมพ์สูตรได้                                |
 
----
-
-## 📸 Screenshots
-
-### Light Mode
-
-<img src="screenshots/light-mode.png" alt="Light Mode" width="600">
-
-### Dark Mode
-
-<img src="screenshots/dark-mode.png" alt="Dark Mode" width="600">
-
----
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -148,3 +134,4 @@ Made with ❤️ and lots of curry 🍛
 
 - Font: [Kanit](https://fonts.google.com/specimen/Kanit) by Cadson Demak
 - Inspiration: Japanese curry house menus
+
